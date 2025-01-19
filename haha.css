@@ -123,6 +123,8 @@ header nav ul.hidden{
     padding: 5em;
     background-image: url('Brown Vintage Aesthetic Paper Blank Background Instagram Story.jpg');
     background-size: cover;
+    background-repeat: repeat-x;
+   
     
 }
 
