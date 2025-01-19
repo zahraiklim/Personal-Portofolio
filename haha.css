@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
 }
 
 body {
@@ -19,6 +20,21 @@ header {
   padding: 1em;
   background-color: #333;
   color: #fff;
+}
+header h1 {
+  font-size: 1em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 header h1 {
@@ -41,11 +57,11 @@ header nav ul li a {
 @media (max-width: 768px) {
   header {
       flex-direction: column; /* Mengubah arah flex menjadi kolom di layar kecil */
-      align-items: flex-start; /* Menjaga elemen di kiri */
+      
   }
 
   header h1 {
-      font-size: 1.3em; /* Mengurangi ukuran font judul di layar kecil */
+      font-size: 1em; /* Mengurangi ukuran font judul di layar kecil */
       margin-bottom: 0.5em; /* Menambahkan margin bawah untuk jarak */
   }
 
@@ -61,7 +77,7 @@ header nav ul li a {
   }
 
   header h1 {
-      font-size: 1.2em; /* Mengurangi ukuran font judul lebih lanjut */
+      font-size: 1em; 
   }
 
   header nav ul {
@@ -74,7 +90,7 @@ header nav ul li a {
     text-align: center;
     background-image: url('./Brown Vintage Aesthetic Paper Blank Background Instagram Story.jpg');
     background-size: cover;
-    background-position: center; /* Menjaga posisi background */
+    
 }
 
 #home h2 {
@@ -128,7 +144,7 @@ header nav ul li a {
     padding: 5em;
     background-image: url('Brown Vintage Aesthetic Paper Blank Background Instagram Story.jpg');
     background-size: cover;
-    background-position: center; /* Menjaga posisi background */
+    
 }
 
 #about h2 {
@@ -148,7 +164,8 @@ header nav ul li a {
     color: black;
     font-weight: bold;
     text-shadow: 2px 2px #ddd;
-    text-align: center; /* Menjaga paragraf tetap terpusat */
+    text-align: center;
+    
 }
 
 #about li {
@@ -210,54 +227,12 @@ header nav ul li a {
     }
 }
   
- #skills {
-    padding: 2em;
-    background-color: #d19e6f;
-}
 
-#skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-#skills li {
-    list-style: none;
-    padding: 0.5em 1em;
-    background-color: burlywood;
-    color: white;
-    border-radius: 5px;
-    font-size: 1em; /* Menggunakan ukuran font yang fleksibel */
-}
-
-/* Media Queries untuk Responsivitas */
-@media (max-width: 768px) {
-    #skills {
-        padding: 1.5em; /* Mengurangi padding di layar kecil */
-    }
-
-    #skills li {
-        padding: 0.4em 0.8em; /* Mengurangi padding pada item di layar kecil */
-        font-size: 0.9em; /* Mengurangi ukuran font di layar kecil */
-    }
-}
-
-@media (max-width: 480px) {
-    #skills {
-        padding: 1em; /* Mengurangi padding lebih lanjut di layar sangat kecil */
-    }
-
-    #skills li {
-        padding: 0.3em 0.6em; /* Mengurangi padding lebih lanjut */
-        font-size: 0.8em; /* Mengurangi ukuran font lebih lanjut */
-    }
-}
   #projects {
     padding: 5em;
     background-image: url('./Brown Vintage Aesthetic Paper Blank Background Instagram Story.jpg');
     background-size: cover;
-    background-position: center; /* Menjaga posisi background */
+   
 }
 
 .project {
@@ -343,8 +318,8 @@ header nav ul li a {
 
 button {
     background-color: burlywood;
-    color: black;
-    text-shadow: 2px 2px white;
+    color: white;
+    text-shadow: 2px 2px black;
     padding: 0.75em; /* Mengubah padding untuk konsistensi */
     text-align: center; 
     text-decoration: none; 
