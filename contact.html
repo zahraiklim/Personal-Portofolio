@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+  <link rel="stylesheet" href="./haha.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Siti Zahra Iklimah</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="prortofolio.html">Portofolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me at:</h2>
+    <br>
+    <form id="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+  </section>
+  
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+        emailjs.init("vHFNvC5XUSS_cwM2-"); // Ganti dengan public key Anda
+
+        document.getElementById("form").onsubmit = function(event) {
+            event.preventDefault(); // Mencegah pengiriman default
+
+            // Mengambil nilai dari input
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Menyiapkan data untuk email
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+            };
+
+            // Mengirim email menggunakan EmailJS
+            emailjs.send('service_yeu5g1s', 'template_torxl3c', templateParams) // Ganti dengan SERVICE ID dan TEMPLATE ID Anda
+            .then(function(response) {
+                console.log('Pesan terkirim!', response.status, response.text);
+                alert('Pesan berhasil dikirim!');
+            }, function(error) {
+                console.error('Pesan gagal terkirim.', error);
+                alert('Pesan gagal dikirim. Silakan coba lagi.');
+            });
+        };
+    })();
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Siti Zahra Iklimah</p>
+    <div class="social-links">
+      <img src="twt.png" class=logo>
+      <a href="https://x.com/zraaaa26_?t=O12kR4dVQ6hwSXnpviXBEA&s=09">Twitter</a>
+      <img src="linkedin.jpg" class="logo">
+      <a href="https://www.linkedin.com/in/zahra-iklim-bb47a4329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+      <img src="ig2.jpg" class="logo">
+      <a href="https://www.instagram.com/z_ik26/profilecard/?igsh=a2FxMGFtY3dpeHB0">Instagram</a>
+    </div>
+    
+  </footer>
+
+  
+  
+</body>
+</html>
