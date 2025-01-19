@@ -21,21 +21,7 @@ header {
   background-color: #333;
   color: #fff;
 }
-header h1 {
-  font-size: 1em;
-  font-family: 'Times New Roman', Times, serif;
-}
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1em;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
 
 header h1 {
   font-size: 1.5em;
@@ -46,6 +32,7 @@ header nav ul {
   list-style: none;
   display: flex;
   gap: 1em;
+  width: 100%;
 }
 
 header nav ul li a {
@@ -53,35 +40,27 @@ header nav ul li a {
   text-decoration: none;
 }
 
-/* Media Queries untuk Responsivitas */
-@media (max-width: 768px) {
-  header {
-      flex-direction: column; /* Mengubah arah flex menjadi kolom di layar kecil */
-      
-  }
-
-  header h1 {
-      font-size: 1em; /* Mengurangi ukuran font judul di layar kecil */
-      margin-bottom: 0.5em; /* Menambahkan margin bawah untuk jarak */
-  }
-
-  header nav ul {
-      flex-direction: column; /* Mengubah arah flex menjadi kolom untuk navigasi */
-      gap: 0.5em; /* Mengurangi jarak antar item navigasi */
-  }
+#menu{
+  display: none;
+  font-size: 24px;
+ 
 }
 
-@media (max-width: 480px) {
-  header {
-      padding: 0.5em; /* Mengurangi padding lebih lanjut di layar sangat kecil */
-  }
+header nav ul.hidden{
+  display: none;
+}
 
-  header h1 {
-      font-size: 1em; 
+@media only screen and (max-width: 768px) {
+  header nav{
+    flex-wrap: wrap;
   }
-
-  header nav ul {
-      gap: 0.3em; /* Mengurangi jarak antar item navigasi lebih lanjut */
+  header nav ul{
+    flex-direction: column;
+    width: 100%;
+  }
+  #menu{
+    display: flex;
+    align-items: center;
   }
 }
   

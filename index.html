@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Portfolio</title>
   <link rel="stylesheet" href="./haha.css">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -13,12 +14,14 @@
   <header>
     <h1>Siti Zahra Iklimah</h1>
     <nav>
-      <ul>
+      <div id="menu" class="hidden"><i class="ph ph-list"></i></div>
+      <ul id="menulist">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="prortofolio.html">Portofolio</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+     
     </nav>
   </header>
 
@@ -45,6 +48,7 @@
     </div>
     
   </footer>
+  <script src="navbar.js"></script>
 
 </body>
 </html>
